@@ -9,6 +9,7 @@ int main()
 	privet(a);
 	while (true)
 	{
+		cout<<endl;
 		cin>>a;
 		privet(a);
 	}
