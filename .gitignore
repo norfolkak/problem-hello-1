@@ -1,0 +1,4 @@
+#trash
+*.gch
+*.o
+hello
