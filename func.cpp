@@ -2,9 +2,8 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
-void privet(string name)
+void privet(std::string name)
 {
-	cout<<"Hello, "+ name;
+	std::cout<<"Hello, "+ name;
 }

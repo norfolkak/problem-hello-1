@@ -3,16 +3,15 @@
 #include <iostream>
 #include <string>
 #include "header.h"
-using namespace std;
 
 int main()
 {
-	string a = "world";
+	std::string a = "world";
 	privet(a);
 	while (true)
 	{
-		cout<<endl;
-		cin>>a;
+		std::cout<<std::endl;
+		std::cin>>a;
 		privet(a);
 	}
 
