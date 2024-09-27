@@ -1,4 +1,4 @@
-# Assignment 1
+# Assignment 2b
 ## Author
 Клопов Алексей Романович, группа 24.Б82-мм
 ## Contacts
