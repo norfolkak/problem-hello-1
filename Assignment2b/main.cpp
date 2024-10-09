@@ -7,7 +7,7 @@
 double solution(std::string rpn)
 {
     double* arr = new double[100];
-    int top = -1;
+    double* top = arr;
     std::stringstream ss(rpn);
     std::string cell;
     
@@ -15,20 +15,20 @@ double solution(std::string rpn)
     {   
     	if (cell == "+" || cell == "-" || cell == "*" || cell == "/")
     	{
-            double b = arr[top--];
-            double a = arr[top--];
-            if (cell == "+") arr[++top] = a + b;
-            else if (cell == "-") arr[++top] = a - b;
-            else if (cell == "*") arr[++top] = a * b;
-            else if (cell == "/") arr[++top] = a / b;
+            double b = *(--top);
+            double a = *(--top);
+            if (cell == "+") *top++ = a + b;
+            else if (cell == "-") *top++ = a - b;
+            else if (cell == "*") *top++ = a * b;
+            else if (cell == "/") *top++ = a / b;
         }
         else 
         {
-            arr[++top] = std::stoi(cell);
+            *top++ = std::stod(cell);
         }
     }
     
-    double result = arr[top];
+    double result = *(top - 1);
     delete [] arr;
     return result;
 }
