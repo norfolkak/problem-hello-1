@@ -1,6 +1,9 @@
+//Klopov Aleksei - Assignment 2b - st130153@student.spbu.ru
+
 #include <iostream>
 #include <string>
 #include <sstream>
+
 
 double solution(std::string rpn)
 {

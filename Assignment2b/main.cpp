@@ -1,9 +1,10 @@
-//Klopov Aleksei demo project 2b
+//Klopov Aleksei - Assignment 2b - st130153@student.spbu.ru
 
 #include <iostream>
 #include <string>
 #include <sstream>
 #include "header.h"
+
 
 int main()
 {
