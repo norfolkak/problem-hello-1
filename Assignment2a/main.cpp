@@ -11,7 +11,6 @@ int main()
     outfile.open("reverseddata.txt",std::ios::binary|std::ios::out);
     
     uintmax_t file_size {std::filesystem::file_size("readerdata.txt")-1};
-    std::cout << file_size << '\n';
     char *buffer {new char[file_size]};
     infile.read((char *)buffer,file_size);
     
