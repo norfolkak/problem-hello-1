@@ -17,7 +17,7 @@ int main()
     infile.read((char *)buffer,file_size);
     
     char temporary{};
-    for (int i=0; i<file_size/2; i++)
+    for (uintmax_t i=0; i<file_size/2; i++)
     {
     temporary=buffer[i];
     buffer[i]=buffer[file_size-1-i];
@@ -28,4 +28,6 @@ int main()
     
     infile.close();
     outfile.close();
+    
+    return 0;
 }
