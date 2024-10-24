@@ -5,7 +5,7 @@
 
 #include "transformer.h"
 
-class Dinobot : protected Transformer {
+class Dinobot : public Transformer {
 private:
     std::string dinoMode;
 

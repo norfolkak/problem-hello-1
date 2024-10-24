@@ -14,7 +14,7 @@ private:
 public:
     Squad(const std::string& name);
 
-    void addMember(Transformer* transformer);
+    bool addMember(Transformer* transformer);
     void showSquad() const;
 };
 

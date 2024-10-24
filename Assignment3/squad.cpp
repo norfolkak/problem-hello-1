@@ -6,9 +6,13 @@
 Squad::Squad(const std::string& name)
     : squadName(name), memberCount(0) {}
 
-void Squad::addMember(Transformer* transformer) {
+bool Squad::addMember(Transformer* transformer) {
     if (memberCount < 5) {
         members[memberCount++] = transformer;
+        return true;
+    }
+    else {
+    	return false;
     }
 }
 

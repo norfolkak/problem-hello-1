@@ -1,3 +1,5 @@
+//Klopov Aleksei - Assignment 3 - st130153@student.spbu.ru
+
 #include "gtest/gtest.h"
 #include "weapon.h"
 
