@@ -1,5 +1,13 @@
-//Klopov Aleksei - Assignment 2b - st130153@student.spbu.ru
+//Klopov Aleksei - Assignment 3 - st130153@student.spbu.ru
 
 #include "autobot.h"
 
+Autobot::Autobot(const std::string& name, int strength, int speed,
+                 const Weapon& weapon, const std::string& vehicleMode)
+    : Transformer(name, "Autobot", strength, speed, weapon),
+      vehicleMode(vehicleMode) {}
 
+bool Autobot::transform() {return true;}
+bool Autobot::attack() {return true;}
+
+std::string Autobot::getVehicleMode() const { return vehicleMode; }
