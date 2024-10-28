@@ -1,15 +1,12 @@
 CC=g++
 CFLAGS=-c -Wall
 TARGET=test
-OBJECT_FILES=main.o transformer.o weapon.o autobot.o decepticon.o dinobot.o squad.o
+OBJECT_FILES=transformer.o weapon.o autobot.o decepticon.o dinobot.o squad.o
 
 all: $(TARGET)
 
 $(TARGET): $(OBJECT_FILES) 
 	$(CC) $(OBJECT_FILES) -o $(TARGET)
-	
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
 	
 transformer.o: transformer.cpp
 	$(CC) $(CFLAGS) transformer.cpp	
