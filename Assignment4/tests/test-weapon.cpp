@@ -4,12 +4,12 @@
 #include "weapon.h"
 
 TEST(weapon,name){
-	Weapon weapon("Uchigatana", 67);
-	ASSERT_EQ(weapon.getName(),"Uchigatana");
+    Weapon weapon("Uchigatana", 67);
+    ASSERT_EQ(weapon.getName(),"Uchigatana");
 }
 
 TEST(weapon,power){
-	Weapon weapon("Uchigatana", 67);
-	ASSERT_EQ(weapon.getPowerLevel(),67);
+    Weapon weapon("Uchigatana", 67);
+    ASSERT_EQ(weapon.getPowerLevel(),67);
 }
 

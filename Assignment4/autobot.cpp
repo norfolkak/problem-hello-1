@@ -7,7 +7,11 @@ Autobot::Autobot(const std::string& name, int strength, int speed,
     : Transformer(name, "Autobot", strength, speed, weapon),
       vehicleMode(vehicleMode) {}
 
-bool Autobot::transform() {return true;}
-bool Autobot::attack() {return true;}
+bool Autobot::transform() {
+    return true;
+}
+bool Autobot::attack() {
+    return true;
+}
 
 std::string Autobot::getVehicleMode() const { return vehicleMode; }

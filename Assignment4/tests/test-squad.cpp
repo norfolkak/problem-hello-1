@@ -5,10 +5,10 @@
 #include "dinobot.h"
 
 TEST(squad,members){
-	Squad squad("Pyatyorochka");
-	Weapon weapon("Lava",90);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_TRUE(squad.addMember(&dinobot));
+    Squad squad("Pyatyorochka");
+    Weapon weapon("Lava",90);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_TRUE(squad.addMember(&dinobot));
 }
 
 
