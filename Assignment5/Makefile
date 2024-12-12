@@ -13,6 +13,9 @@ OBJS = $(SRCS:.cpp=.o)
 TEST_FILES = $(wildcard $(TEST_DIR)/test-*.cpp)
 TEST_OBJECTS = $(TEST_FILES:.cpp=.o) $(OBJS)
 
+# Headers
+DEPS = transformer.h dinobot.h autobot.h decepticon.h weapon.h squad.h
+
 # Output binaries
 PROGRAM = $(BUILD_DIR)/power
 TEST_BINARY = $(BUILD_DIR)/RunTests
@@ -43,4 +46,3 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 .PHONY: all clean
-

@@ -28,3 +28,9 @@ TEST(dinobot,speed){
 	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
 	ASSERT_EQ(dinobot.getSpeed(),51);
 }
+
+int main(int argc, char **argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

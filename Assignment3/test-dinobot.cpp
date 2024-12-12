@@ -9,13 +9,13 @@ TEST(dinobot,mode){
 	ASSERT_EQ(dinobot.getDinoMode(),"T-rex");
 }
 
-TEST(decepticon,attack){
+TEST(dinobot,attack){
 	Weapon weapon("Tail",60);
 	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
 	ASSERT_TRUE(dinobot.attack());
 }
 
-TEST(decepticon,transform){
+TEST(dinobot,transform){
 	Weapon weapon("Tail",52);
 	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
 	ASSERT_TRUE(dinobot.transform());
