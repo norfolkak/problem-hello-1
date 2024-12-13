@@ -28,19 +28,19 @@ main.o: main.cpp
 	$(CXX) $(CXXFLAGS) -c main.cpp -o main.o
 
 transformer.o: transformer.cpp
-	$(CXX) $(CXXFLAGS) -c Bumblebee.cpp -o transformer.o
+	$(CXX) $(CXXFLAGS) -c transformer.cpp -o transformer.o
 
 decepticon.o: decepticon.cpp
-	$(CXX) $(CXXFLAGS) -c Prime.cpp -o decepticon.o
+	$(CXX) $(CXXFLAGS) -c decepticon.cpp -o decepticon.o
 
 autobot.o: autobot.cpp
-	$(CXX) $(CXXFLAGS) -c Liege_maximo.cpp -o autobot.o
+	$(CXX) $(CXXFLAGS) -c autobot.cpp -o autobot.o
 
 weapon.o: weapon.cpp
-	$(CXX) $(CXXFLAGS) -c Item.cpp -o weapon.o
+	$(CXX) $(CXXFLAGS) -c weapon.cpp -o weapon.o
 
 squad.o: squad.cpp
-	$(CXX) $(CXXFLAGS) -c Song.cpp -o squad.o
+	$(CXX) $(CXXFLAGS) -c squad.cpp -o squad.o
 	
 test-transformer.o: test-transformer.cpp
 	$(CXX) $(CXXFLAGS) -c test-transformer.cpp -o test-transformer.o
