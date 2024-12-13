@@ -13,5 +13,5 @@ g++
 make
 
 ## Run
-
+./main_program
 ./test
