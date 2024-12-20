@@ -17,6 +17,7 @@ public:
     bool attack() override;
 
     std::string getVehicleMode() const;
+    void setVehicleMode(const std::string& newMode);
 };
 
 #endif

@@ -4,19 +4,26 @@
 #include "dinobot.h"
 
 TEST(dinobot,mode){
-	Weapon weapon("Tail",60);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_EQ(dinobot.getDinoMode(),"T-rex");
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_EQ(dinobot.getDinoMode(),"T-rex");
+}
+
+TEST(dinobot, setmode) {
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    dinobot.setDinoMode("Crocodile");
+    EXPECT_EQ(dinobot.getDinoMode(), "Crocodile");
 }
 
 TEST(dinobot,attack){
-	Weapon weapon("Tail",60);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_TRUE(dinobot.attack());
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_TRUE(dinobot.attack());
 }
 
 TEST(dinobot,transform){
-	Weapon weapon("Tail",52);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_TRUE(dinobot.transform());
+    Weapon weapon("Tail",52);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_TRUE(dinobot.transform());
 }

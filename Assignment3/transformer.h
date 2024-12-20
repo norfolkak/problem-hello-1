@@ -23,6 +23,8 @@ public:
     std::string getFaction() const;
     int getStrength() const;
     int getSpeed() const;
+    
+    void setStrength(int newStrength);
 
     virtual bool transform() = 0;
     virtual bool attack() = 0;

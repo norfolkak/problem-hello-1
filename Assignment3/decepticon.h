@@ -17,6 +17,7 @@ public:
     bool attack() override;
 
     std::string getFlightMode() const;
+    void setFlightMode(const std::string& newMode);
 };
 
 #endif

@@ -11,3 +11,4 @@ bool Autobot::transform() {return true;}
 bool Autobot::attack() {return true;}
 
 std::string Autobot::getVehicleMode() const { return vehicleMode; }
+void Autobot::setVehicleMode(const std::string& newMode) { vehicleMode = newMode; }

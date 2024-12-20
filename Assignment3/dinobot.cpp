@@ -11,4 +11,4 @@ bool Dinobot::transform() {return true;}
 bool Dinobot::attack() {return true;}
 
 std::string Dinobot::getDinoMode() const { return dinoMode; }
-
+void Dinobot::setDinoMode(const std::string& newMode) { dinoMode = newMode; }

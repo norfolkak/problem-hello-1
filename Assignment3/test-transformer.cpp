@@ -3,30 +3,37 @@
 #include "gtest/gtest.h"
 #include "dinobot.h"
 
-TEST(dinobot,name){
-	Weapon weapon("Tail",60);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_EQ(dinobot.getName(),"Magician");
+TEST(transformer,name){
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_EQ(dinobot.getName(),"Magician");
 }
 
 
-TEST(dinobot,faction){
-	Weapon weapon("Tail",60);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_EQ(dinobot.getFaction(),"Dinobot");
+TEST(transformer,faction){
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_EQ(dinobot.getFaction(),"Dinobot");
 }
 
-TEST(dinobot,strength){
-	Weapon weapon("Tail",60);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_EQ(dinobot.getStrength(),37);
+TEST(transformer,strength){
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_EQ(dinobot.getStrength(),37);
 }
 
 
-TEST(dinobot,speed){
-	Weapon weapon("Tail",60);
-	Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
-	ASSERT_EQ(dinobot.getSpeed(),51);
+TEST(transformer,speed){
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    ASSERT_EQ(dinobot.getSpeed(),51);
+}
+
+TEST(transformer, SetStrength) {
+    Weapon weapon("Tail",60);
+    Dinobot dinobot("Magician", 37, 51, weapon, "T-rex");
+    dinobot.setStrength(100);
+    EXPECT_EQ(dinobot.getStrength(), 100);
 }
 
 int main(int argc, char **argv)

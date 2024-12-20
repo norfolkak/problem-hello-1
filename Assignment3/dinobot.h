@@ -17,6 +17,7 @@ public:
     bool attack() override;
 
     std::string getDinoMode() const;
+    void setDinoMode(const std::string& newMode);
 };
 
 #endif

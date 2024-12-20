@@ -13,4 +13,4 @@ std::string Transformer::getName() const { return name; }
 std::string Transformer::getFaction() const { return faction; }
 int Transformer::getStrength() const { return strength; }
 int Transformer::getSpeed() const { return speed; }
-
+void Transformer::setStrength(int newStrength) { strength = newStrength; }

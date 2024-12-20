@@ -24,6 +24,7 @@ void Transformer::openFire() const {
 
 void Transformer::ultra() const {
     std::cout << "using the Ultra attack: Transformer\n";
+  
 }
 
 std::string Transformer::getName() const { return name; }

@@ -11,3 +11,4 @@ bool Decepticon::transform() {return true;}
 bool Decepticon::attack() {return true;}
 
 std::string Decepticon::getFlightMode() const { return flightMode; }
+void Decepticon::setFlightMode(const std::string& newMode) { flightMode = newMode; }
