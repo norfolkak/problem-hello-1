@@ -1,3 +1,5 @@
+//Klopov Aleksei - Assignment 6 - st130153@student.spbu.ru
+
 #ifndef CLASS_TEMPLATE_H
 #define CLASS_TEMPLATE_H
 

@@ -1,3 +1,5 @@
+//Klopov Aleksei - Assignment 6 - st130153@student.spbu.ru
+
 #ifndef CLASS3_H
 #define CLASS3_H
 
@@ -14,7 +16,7 @@ public:
 
     float c_3_2() { return 3.14f; }
 
-    void c_3_3() { std::cout << "Class3: c_3_3 method invoked" << '\n'; }
+    void c_3_3() { std::cout << "Class3: c_3_3 method called" << '\n'; }
 };
 
 #endif
