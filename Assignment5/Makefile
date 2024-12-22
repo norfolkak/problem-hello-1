@@ -3,45 +3,51 @@ CXX = g++
 CXXFLAGS = -I. -std=c++17 -g -fPIC -Wall -Werror -Wpedantic -O2
 
 # Directories
+SRC_DIR = .
 TEST_DIR = tests
 BUILD_DIR = build
+SRC_BUILD_DIR = $(BUILD_DIR)/src
+TEST_BUILD_DIR = $(BUILD_DIR)/tests
 
-# Source files
+# Source files and objects
 SRCS = transformer.cpp dinobot.cpp autobot.cpp decepticon.cpp weapon.cpp squad.cpp
 MAIN_FILE = main.cpp
-OBJS = $(SRCS:.cpp=.o)
 TEST_FILES = $(wildcard $(TEST_DIR)/test-*.cpp)
-TEST_OBJECTS = $(TEST_FILES:.cpp=.o) $(OBJS)
 
-# Headers
-DEPS = transformer.h dinobot.h autobot.h decepticon.h weapon.h squad.h
+SRC_OBJS = $(patsubst %.cpp,$(SRC_BUILD_DIR)/%.o,$(SRCS))
+MAIN_OBJ = $(SRC_BUILD_DIR)/main.o
+TEST_OBJS = $(patsubst $(TEST_DIR)/%.cpp,$(TEST_BUILD_DIR)/%.o,$(TEST_FILES))
 
 # Output binaries
 PROGRAM = $(BUILD_DIR)/power
 TEST_BINARY = $(BUILD_DIR)/RunTests
 
-# GoogleTest flags 
+# GoogleTest flags
 LDFLAGS = -lgtest -lgtest_main -lpthread
 
+all: $(PROGRAM) $(TEST_BINARY)
 
-all: build $(PROGRAM)
+build_dirs:
+	mkdir -p $(SRC_BUILD_DIR) $(TEST_BUILD_DIR)
 
-build:
-	mkdir -p $(BUILD_DIR)
+$(PROGRAM): $(SRC_OBJS) $(MAIN_OBJ)
+	$(CXX) $(CXXFLAGS) -o $(PROGRAM) $^
 
-$(PROGRAM): $(SRCS) $(MAIN_FILE)
-	$(CXX) $(CXXFLAGS) -o $(PROGRAM) $(SRCS) $(MAIN_FILE)
-	
-test: $(SRCS) $(TEST_FILES)
-	$(CXX) $(CXXFLAGS) -o $(TEST_BINARY) $(SRCS) $(TEST_FILES) $(LDFLAGS)
+$(TEST_BINARY): $(SRC_OBJS) $(TEST_OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TEST_BINARY) $^ $(LDFLAGS)
 
-# Run tests
-run-tests: test
+$(SRC_BUILD_DIR)/%.o: %.cpp | build_dirs
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(TEST_BUILD_DIR)/%.o: $(TEST_DIR)/%.cpp | build_dirs
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+run-tests: $(TEST_BINARY)
 	./$(TEST_BINARY)
 
 run-main: $(PROGRAM)
 	./$(PROGRAM)
-	
+
 clean:
 	rm -rf $(BUILD_DIR)
 
